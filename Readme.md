@@ -4,7 +4,7 @@ This project is a FastAPI-based calculator application that performs basic arith
 It includes logging, unit/integration/end-to-end testing, and a GitHub Actions CI workflow for automated testing.
 
 Clone the repository
-git clone https://github.com/nishitanadimpalli/calculator--FastApi.git
+git clone https://github.com/Vishesh0-7/Calculator_FastAPI.git
 cd calculator--FastApi
 
 Create and activate a virrtual environment
