@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>FastAPI Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <style>
+    body { font-family: system-ui, Arial; margin: 2rem; }
+    input, select, button { padding: .5rem; margin-right: .5rem; }
+    #result { font-weight: 700; margin-top: 1rem; }
+    .row { margin-bottom: .75rem; }
+  </style>
+</head>
+<body>
+  <h1>FastAPI Calculator</h1>
+  <div class="row">
+    <label>A <input id="a" type="number" value="3" step="any"></label>
+    <label>B <input id="b" type="number" value="2" step="any"></label>
+  </div>
+  <div class="row">
+    <select id="op">
+      <option value="add">add (+)</option>
+      <option value="sub">sub (-)</option>
+      <option value="mul">mul (×)</option>
+      <option value="div">div (÷)</option>
+    </select>
+    <button id="go">Calculate</button>
+  </div>
+  <div id="result">Result: —</div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    $("go").addEventListener("click", async () => {
+      const params = new URLSearchParams({
+        op: $("op").value,
+        a: $("a").value,
+        b: $("b").value
+      });
+      const res = await fetch(`/calc?${params}`);
+      const data = await res.json();
+      $("result").textContent = res.ok ? `Result: ${data.result}` : `Error: ${data.detail}`;
+    });
+  </script>
+</body>
+</html>

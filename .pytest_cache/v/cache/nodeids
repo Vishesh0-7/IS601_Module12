@@ -1,0 +1,17 @@
+[
+  "tests/e2e/test_e2e_playwright.py::test_ui_addition",
+  "tests/e2e/test_e2e_playwright.py::test_ui_div_by_zero",
+  "tests/integration/test_api.py::test_add_endpoint",
+  "tests/integration/test_api.py::test_calc_router_invalid_op",
+  "tests/integration/test_api.py::test_div_endpoint_by_zero",
+  "tests/integration/test_api.py::test_div_endpoint_ok",
+  "tests/integration/test_api.py::test_health",
+  "tests/integration/test_api.py::test_mul_endpoint",
+  "tests/integration/test_api.py::test_sub_endpoint",
+  "tests/unit/test_operations.py::test_add",
+  "tests/unit/test_operations.py::test_div_by_zero",
+  "tests/unit/test_operations.py::test_div_normal",
+  "tests/unit/test_operations.py::test_float_precision",
+  "tests/unit/test_operations.py::test_mul",
+  "tests/unit/test_operations.py::test_sub"
+]
